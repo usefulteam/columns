@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+$percent-points: 5 10 15 17 20 25 30 33 35 40 45 50 55 60 65 67 70 75 80 85 90
+	95 100 !default;
+
+// Note:
+// Sometimes Chrome emulator add .33px to devices width.
+// But sometimes just adding .33px is still not enough.
+// So that I make it .35px to make sure it really passes the value.
+
+/// Breakpoints
+/// @see https://bulma.io/documentation/overview/responsiveness/
+/// @see https://getbootstrap.com/docs/4.1/layout/overview/
+
+// --------------------
+// Device oriented
+// --------------------
+
+// Currently we have "phone" as the narrowest defined breakpoint.
+// For the narrowest, let's set it from zero or from the "start".
+// That means, no min width is defined.
+
+$max-width-phone: 480.35px !default;
+$min-width-phonels: $max-width-phone + 0.65px !default;
+$max-width-phonels: 767.35px !default;
+
+// mobile breakpoint covers phone & phonels
+$max-width-mobile: $max-width-phonels !default;
+
+$min-width-tablet: $max-width-phonels + 0.65px !default;
+$max-width-tablet: 991.35px !default;
+
+$min-width-tabletls: $max-width-tablet + 0.65px !default;
+$max-width-tabletls: 1024.35px !default;
+
+$min-width-desktop: $max-width-tabletls + 0.65px !default;
+$max-width-desktop: 1366.35px !default;
+
+$min-width-widescreen: $max-width-desktop + 0.65px !default;
+$max-width-widescreen: 1919.35 !default;
+
+// Currently we have "fullhd" as the widest defined breakpoint.
+// For the widest, let's set it as wide as possible
+// That means, no max width defined
+$min-width-fullhd: $max-width-widescreen + 0.65px !default;
+
+// --------------------
+// Dimension oriented
+// --------------------
+$max-width-xs: $max-width-phone !default;
+
+$min-width-sm: $max-width-phone + 0.65px !default;
+$max-width-sm: $max-width-mobile !default;
+
+$min-width-md: $min-width-tablet !default;
+$max-width-md: $max-width-tabletls !default;
+
+$min-width-lg: $min-width-desktop !default;
+$max-width-lg: $max-width-desktop !default;
+
+$min-width-xl: $min-width-widescreen !default;
+$max-width-xl: $max-width-widescreen !default;
+
+$min-width-fhd: $min-width-fullhd + 0.65px !default;

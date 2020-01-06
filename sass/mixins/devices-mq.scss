@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+// "from-device" breakpoints
+@mixin from-phone {
+	// from phone up
+	// Currently phone is the most narrow breakpoint. That means, no min width defined
+	@media screen {
+		@content;
+	}
+}
+
+@mixin from-phonels {
+	// from phone landscape up
+	@media screen and (min-width: $min-width-phonels) {
+		@content;
+	}
+}
+
+@mixin from-mobile {
+	// the same as phone
+	@media screen {
+		@content;
+	}
+}
+
+@mixin from-tablet {
+	// from tablet up
+	@media screen and (min-width: $min-width-tablet) {
+		@content;
+	}
+}
+
+@mixin from-tabletls {
+	// from tablet landscape up
+	@media screen and (min-width: $min-width-tabletls) {
+		@content;
+	}
+}
+
+@mixin from-desktop {
+	// from desktop up
+	@media screen and (min-width: $min-width-desktop) {
+		@content;
+	}
+}
+
+@mixin from-widescreen {
+	// from widescreen up
+	@media screen and (min-width: $min-width-widescreen) {
+		@content;
+	}
+}
+
+@mixin from-fullhd {
+	// from fullhd up
+	@media screen and (min-width: $min-width-fullhd) {
+		@content;
+	}
+}
+
+// "device-up" breakpoints (alternative names for "from-device" breakpoints)
+// from phone up
+@mixin phone-up {
+	// Currently phone is the most narrow breakpoint. That means, no min width defined
+	@media screen {
+		@content;
+	}
+}
+
+@mixin phonels-up {
+	// from phone landscape up
+	@media screen and (min-width: $min-width-phonels) {
+		@content;
+	}
+}
+
+@mixin mobile-up {
+	// the same as phone
+	@media screen {
+		@content;
+	}
+}
+
+@mixin tablet-up {
+	// from tablet up
+	@media screen and (min-width: $min-width-tablet) {
+		@content;
+	}
+}
+
+@mixin tabletls-up {
+	// from tablet landscape up
+	@media screen and (min-width: $min-width-tabletls) {
+		@content;
+	}
+}
+
+@mixin desktop-up {
+	// from desktop up
+	@media screen and (min-width: $min-width-desktop) {
+		@content;
+	}
+}
+
+@mixin widescreen-up {
+	// from widescreen up
+	@media screen and (min-width: $min-width-widescreen) {
+		@content;
+	}
+}
+
+@mixin fullhd-up {
+	// from widescreen up
+	@media screen and (min-width: $min-width-fullhd) {
+		@content;
+	}
+}
+
+// "until-device" breakpoints
+@mixin until-phone {
+	// from 0 until phone's max width
+	@media screen and (max-width: $max-width-phone) {
+		@content;
+	}
+}
+
+@mixin until-phonels {
+	// from 0 until phone landscape's max width
+	@media screen and (max-width: $max-width-phonels) {
+		@content;
+	}
+}
+
+@mixin until-mobile {
+	// from 0 until mobile's max width
+	@media screen and (max-width: $max-width-mobile) {
+		@content;
+	}
+}
+
+@mixin until-tablet {
+	// from 0 until tablet's max width
+	@media screen and (max-width: $max-width-tablet) {
+		@content;
+	}
+}
+
+@mixin until-tabletls {
+	// from 0 until tablet landscape's max width
+	@media screen and (max-width: $max-width-tabletls) {
+		@content;
+	}
+}
+
+@mixin until-desktop {
+	// from 0 to desktop's max width
+	@media screen and (max-width: $max-width-desktop) {
+		@content;
+	}
+}
+
+@mixin until-widescreen {
+	// from 0 to widescreen's max width
+	@media screen and (max-width: $max-width-widescreen) {
+		@content;
+	}
+}
+
+@mixin until-fullhd {
+	// from 0 until fullhd's max width
+	// Currently fullhd is the widest breakpoint. That means, no max width defined {
+	@media screen {
+		@content;
+	}
+}
+
+// "device-down" breakpoints (alternative names for "until-device" breakpoints)
+@mixin phone-down {
+	// from phone's max width down
+	@media screen and (max-width: $max-width-phone) {
+		@content;
+	}
+}
+
+@mixin phonels-down {
+	// from phone landscape's max width down
+	@media screen and (max-width: $max-width-phonels) {
+		@content;
+	}
+}
+
+@mixin mobile-down {
+	// from mobile's max width down
+	@media screen and (max-width: $max-width-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet-down {
+	// from tablet's max width down
+	@media screen and (max-width: $max-width-tablet) {
+		@content;
+	}
+}
+
+@mixin tabletls-down {
+	// from tablet landscape's max width down
+	@media screen and (max-width: $max-width-tabletls) {
+		@content;
+	}
+}
+
+@mixin desktop-down {
+	// from desktop's max width down
+	@media screen and (max-width: $max-width-desktop) {
+		@content;
+	}
+}
+
+@mixin widescreen-down {
+	// from widescreen's max width down
+	@media screen and (max-width: $max-width-widescreen) {
+		@content;
+	}
+}
+
+@mixin fullhd-down {
+	// from fullhd's max width down
+	// Currently fullhd is the widest breakpoint. That means, no max width defined
+	@media screen {
+		@content;
+	}
+}
+
+@mixin phone-only {
+	// from 0 until phone's max width
+	// Currently phone is the most narrow breakpoint. That means, no min width defined
+	@media screen and (max-width: $max-width-phone) {
+		@content;
+	}
+}
+
+@mixin phonels-only {
+	// from phone landscape's min width until phone landscape's max width
+	@media screen and (min-width: $min-width-phonels) and (max-width: $max-width-phonels) {
+		@content;
+	}
+}
+
+@mixin mobile-only {
+	// from 0 until mobile's max width
+	@media screen and (max-width: $max-width-mobile) {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+	// from tablet's min width until tablet's max width
+	@media screen and (min-width: $min-width-tablet) and (max-width: $max-width-tablet) {
+		@content;
+	}
+}
+
+@mixin tabletls-only {
+	// from tablet landscape's min width until tablet landscape's max width
+	@media screen and (min-width: $min-width-tabletls) and (max-width: $max-width-tabletls) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+	// from desktop's min width until desktop's max width
+	@media screen and (min-width: $min-width-desktop) and (max-width: $max-width-desktop) {
+		@content;
+	}
+}
+
+@mixin widescreen-only {
+	// from widescreen's min width until widescreen's max width
+	@media screen and (min-width: $min-width-widescreen) and (max-width: $max-width-widescreen) {
+		@content;
+	}
+}
+
+@mixin fullhd-only {
+	// from fullhd's min width until fullhd's max width
+	// Currently fullhd is the widest breakpoint. That means, no max width defined
+	@media screen and (min-width: $min-width-fullhd) {
+		@content;
+	}
+}

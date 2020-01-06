@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+// "from-dimension" breakpoints
+@include from-xs {
+	// from xs up
+	// Currently xs is the most narrow breakpoint. That means, no min width defined
+	@media screen {
+		@content;
+	}
+}
+
+@include from-sm {
+	// from sm up
+	@media screen and (min-width: $min-width-sm) {
+		@content;
+	}
+}
+
+@include from-md {
+	// from md up
+	@media screen and (min-width: $min-width-md) {
+		@content;
+	}
+}
+
+@include from-lg {
+	// from lg up
+	@media screen and (min-width: $min-width-lg) {
+		@content;
+	}
+}
+
+@include from-xl {
+	// from xl up
+	@media screen and (min-width: $min-width-xl) {
+		@content;
+	}
+}
+
+@include from-fhd {
+	// from fhd up
+	@media screen and (min-width: $min-width-fhd) {
+		@content;
+	}
+}
+
+// "dimension-up" breakpoints (alternative names for "from-dimension" breakpoints)
+@include xs-up {
+	// from xs up
+	// Currently xs is the most narrow breakpoint. That means, no min width defined
+	@media screen {
+		@content;
+	}
+}
+
+@include sm-up {
+	// from sm up
+	@media screen and (min-width: $min-width-sm) {
+		@content;
+	}
+}
+
+@include md-up {
+	// from md up
+	@media screen and (min-width: $min-width-md) {
+		@content;
+	}
+}
+
+@include lg-up {
+	// from desktop above
+	@media screen and (min-width: $min-width-lg) {
+		@content;
+	}
+}
+
+@include xl-up {
+	// from widescreen above
+	@media screen and (min-width: $min-width-xl) {
+		@content;
+	}
+}
+
+@include fhd-up {
+	// from fhd up
+	@media screen and (min-width: $min-width-fhd) {
+		@content;
+	}
+}
+
+// "until-dimension" breakpoints
+@include until-xs {
+	// from 0 until xs's max width
+	@media screen and (max-width: $max-width-xs) {
+		@content;
+	}
+}
+
+@include until-sm {
+	// from 0 until sm's max width
+	@media screen and (max-width: $max-width-sm) {
+		@content;
+	}
+}
+
+@include until-md {
+	// from 0 until md's max width
+	@media screen and (max-width: $max-width-md) {
+		@content;
+	}
+}
+
+@include until-lg {
+	// from 0 to lg's max width
+	@media screen and (max-width: $max-width-lg) {
+		@content;
+	}
+}
+
+@include until-xl {
+	// from 0 to xl's max width
+	@media screen and (max-width: $max-width-xl) {
+		@content;
+	}
+}
+
+@include until-fhd {
+	// from 0 until fhd's max width
+	// Currently fhd is the widest breakpoint. That means, no max width defined
+	@media screen {
+		@content;
+	}
+}
+
+// "dimension-down" breakpoints (alternative names for "until-dimension" breakpoints)
+@include xs-down {
+	// from xs's max width down
+	@media screen and (max-width: $max-width-xs) {
+		@content;
+	}
+}
+
+@include sm-down {
+	// from sm's max width down
+	@media screen and (max-width: $max-width-sm) {
+		@content;
+	}
+}
+
+@include md-down {
+	// from md's max width down
+	@media screen and (max-width: $max-width-md) {
+		@content;
+	}
+}
+
+@include lg-down {
+	// from lg's max width down
+	@media screen and (max-width: $max-width-lg) {
+		@content;
+	}
+}
+
+@include xl-down {
+	// from xl's max width down
+	@media screen and (max-width: $max-width-xl) {
+		@content;
+	}
+}
+
+@include fhd-down {
+	// from fhd's max width down
+	// Currently fhd is the widest breakpoint. That means, no max width defined
+	@media screen {
+		@content;
+	}
+}
+
+@include xs-only {
+	// from 0 until xs's max width
+	// Currently xs is the most narrow breakpoint. That means, no min width defined
+	@media screen and (max-width: $max-width-xs) {
+		@content;
+	}
+}
+
+@include sm-only {
+	// from sm's min width until sm's max width
+	@media screen and (min-width: $min-width-sm) and (max-width: $max-width-sm) {
+		@content;
+	}
+}
+
+@include md-only {
+	// from md's min width until md's max width
+	@media screen and (min-width: $min-width-md) and (max-width: $max-width-md) {
+		@content;
+	}
+}
+
+@include lg-only {
+	// from lg's min width until lg's max width
+	@media screen and (min-width: $min-width-lg) and (max-width: $max-width-lg) {
+		@content;
+	}
+}
+
+@include xl-only {
+	// from xl's min width until xl's max width
+	@media screen and (min-width: $min-width-xl) and (max-width: $max-width-xl) {
+		@content;
+	}
+}
+
+@include fhd-only {
+	// from fhd's min width until fhd's max width
+	// Currently fhd is the widest breakpoint. That means, no max width defined
+	@media screen and (min-width: $min-width-fhd) {
+		@content;
+	}
+}
