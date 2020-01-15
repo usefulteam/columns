@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+@mixin setup-width($breakpoint: "") {
+	@if $breakpoint != "" {
+		$breakpoint: $breakpoint + "-";
+	}
+
+	@each $width in $percent-points {
+		.#{$breakpoint}w#{$width} {
+			@if $width == 17 {
+				width: 16.6666667%;
+			} @else if $width == 33 {
+				width: 33.3333333%;
+			} @else if $width == 67 {
+				width: 66.6666667%;
+			} @else {
+				width: unquote($width + "%");
+			}
+		}
+	}
+}
+
+@mixin setup-display($breakpoint: "") {
+	@if $breakpoint != "" {
+		$breakpoint: $breakpoint + "-";
+	}
+
+	@each $display in $displays {
+		@if $display == none {
+			.#{$breakpoint}is-hidden {
+				display: $display;
+			}
+		} @else {
+			@if $display == block {
+				.#{$breakpoint}is-shown {
+					display: $display;
+				}
+			}
+
+			.#{$breakpoint}is-#{$display} {
+				display: $display;
+			}
+		}
+	}
+}
+
+@mixin setup-position($breakpoint: "") {
+	@if $breakpoint != "" {
+		$breakpoint: $breakpoint + "-";
+	}
+
+	@each $position in $positions {
+		.is-#{$breakpoint}#{$position} {
+			position: $position;
+		}
+	}
+
+	.#{$breakpoint}is-centered {
+		@include centered;
+	}
+
+	.#{$breakpoint}is-uncentered {
+		@include reset-horizontal-margins;
+	}
+}
+
+@mixin setup-alignment($breakpoint: "") {
+	@if $breakpoint != "" {
+		$breakpoint: $breakpoint + "-";
+	}
+
+	@each $alignment in $alignments {
+		@if $alignment == justify {
+			.#{$breakpoint}has-text-justified {
+				text-align: $alignment;
+			}
+		} @else if $alignment == center {
+			.#{$breakpoint}has-text-centered {
+				text-align: $alignment;
+			}
+		} @else {
+			.#{$breakpoint}has-text-#{$alignment} {
+				text-align: $alignment;
+			}
+		}
+	}
+}
