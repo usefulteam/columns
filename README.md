@@ -1,2 +1,2 @@
-# columns
-CSS flexbox columns
+# Columns
+Create columns layout easily.
