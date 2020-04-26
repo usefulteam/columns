@@ -27,74 +27,14 @@
 }
 
 // --------------------
-// Device oriented
+// Dimension oriented
 // --------------------
 
-/* from phone above/ from xs above (the same as all devices) */
+/* from xs above (the same as all devices) */
 @include setup-width();
 @include setup-display();
 @include setup-position();
 @include setup-alignment();
-
-/* from phone landscape above */
-@include from-phonels {
-	@include setup-width(phone-wide);
-	@include setup-display(phone-wide);
-	@include setup-position(phone-wide);
-	@include setup-alignment(phone-wide);
-}
-
-/* from mobile above */
-@include from-mobile {
-	@include setup-width(mobile);
-	@include setup-display(mobile);
-	@include setup-position(mobile);
-	@include setup-alignment(mobile);
-}
-
-/* from tablet above */
-@include from-tablet {
-	@include setup-width(tablet);
-	@include setup-display(tablet);
-	@include setup-position(tablet);
-	@include setup-alignment(tablet);
-}
-
-/* from tablet landscape above */
-@include from-tabletls {
-	@include setup-width(tablet-wide);
-	@include setup-display(tablet-wide);
-	@include setup-position(tablet-wide);
-	@include setup-alignment(tablet-wide);
-}
-
-/* from desktop above */
-@include from-desktop {
-	@include setup-width(desktop);
-	@include setup-display(desktop);
-	@include setup-position(desktop);
-	@include setup-alignment(desktop);
-}
-
-/* from widescreen above */
-@include from-widescreen {
-	@include setup-width(wide-screen);
-	@include setup-display(wide-screen);
-	@include setup-position(wide-screen);
-	@include setup-alignment(wide-screen);
-}
-
-/* from fullhd above */
-@include from-fullhd {
-	@include setup-width(fhd);
-	@include setup-display(fhd);
-	@include setup-position(fhd);
-	@include setup-alignment(fhd);
-}
-
-// --------------------
-// Dimension oriented
-// --------------------
 
 /* from small above */
 @include from-sm {
