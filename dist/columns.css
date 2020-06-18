@@ -13,12 +13,6 @@
       flex-wrap: wrap;
 }
 
-.columns > .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .columns > .column:last-child {
   margin-left: auto;
 }
